@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../static/styles/styles.css">
 </head>
 <body>
     <header>
         <figure>
-            <img src="../assets/logo.png" alt="Logo">
+            <img src="../static/assets/logo.png" alt="Logo">
         </figure>
         <div class="menu">
             <nav>
                 <a href="#"> Home </a>
-                <a href="#"> Quem somos </a>
-                <a href="#"> Contato </a>
+                <a href="{{ url_for('sobre') }}"> Quem somos </a>
+                <a href="{{ url_for('contato') }}"> Contato </a>
             </nav>
         </div>
     </header>
     <section class="main">
         <div class="capa">
             <figure>
-                <img src="../assets/capa.png" alt="Imagem de Capa">
+                <img src="../static/assets/capa.png" alt="Imagem de Capa">
             </figure>
         </div>
         <div class="sobre">
