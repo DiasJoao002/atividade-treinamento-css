@@ -1,10 +1,10 @@
-from university import app
+from . import app
 from flask import render_template
-from university.forms import FormEntrarContato
+from .forms import FormEntrarContato
 
 @app.route('/')
 def homepage():
-    return render_template('home.html')
+    return render_template('index.html')
 
 @app.route('/sobre')
 def sobre():
