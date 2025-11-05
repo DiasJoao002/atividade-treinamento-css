@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Logo">
+        </figure>
+        <div class="menu">
+            <nav>
+                <a href="{{ url_for('homepage') }}"> Home </a>
+                <a href="{{ url_for('sobre') }}"> Quem somos </a>
+                <a href="{{ url_for('contato') }}"> Contato </a>
+            </nav>
+        </div>
+    </header>
+    <section class="main">
+        {% block content %}{% endblock %}
+    </section>
+    <footer>
+        <p>Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Início do widget Vlibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- Fim do widget Vlibras -->
+</body>
+</html>
